@@ -13,10 +13,10 @@
 // if answer is not 1 and not 2, answer is invalid; ask question again
 
 // game set up
-let boardCell = ' '
+let emptyCell = ' '
 let board = []
 for (let i = 0; i < 9; i++) {
-    board.push(boardCell) // init board with blank spaces
+    board.push(emptyCell) // init board with blank spaces
 }
 const winCombinations = [ [0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [0, 4, 8], [2, 5, 8], [2, 4, 6] ] // all the possible win combinations
 let player1Turn 
@@ -63,7 +63,7 @@ const promptComputer = () => {
     // find all available spaces on board 
     let availableSpaces = []
     for (let i = 0; i < 9; i++) {
-        if (board[i] === ' ') {
+        if (board[i] === emptyCell) {
             availableSpaces.push(i)
         }
     }
@@ -114,7 +114,7 @@ const updateGame = (playerMove) => {
 }
 
 const isValidMove = (cell) => {
-    return board[cell] === ' ' && (cell >= 0 && cell <= 8)
+    return board[cell] === emptyCell && (cell >= 0 && cell <= 8)
 }
 
 const placeMark = (cell) => {
@@ -124,7 +124,7 @@ const placeMark = (cell) => {
 
 const checkForGameover = () => {
     const playerWon = checkForWin()
-    const isTie = !board.includes(' ')
+    const isTie = !board.includes(emptyCell)
 
     if (playerWon) {
         // game has a winner
