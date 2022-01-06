@@ -13,7 +13,11 @@
 // if answer is not 1 and not 2, answer is invalid; ask question again
 
 // game set up
-let board = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '] // init board with blank spaces
+let boardCell = ' '
+let board = []
+for (let i = 0; i < 9; i++) {
+    board.push(boardCell) // init board with blank spaces
+}
 const winCombinations = [ [0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [0, 4, 8], [2, 5, 8], [2, 4, 6] ] // all the possible win combinations
 let player1Turn 
 let computerIsPlaying = false
