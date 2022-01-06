@@ -6,7 +6,7 @@
 * I've also added support for a computer player, so that you can play the game by yourself (err... with a computer!). 
 
 ## Commands
-To start the game, simply run ```node terminal-ttt.js``` in your terminal from the same location the file is saved.
+To start the game, simply run ```node terminal-ttt.js``` in your terminal from the same location the file is saved. You must have Node.js installed on your machine.
 
 ## Functionality
 * User can choose number of players (2 humans, or 1 human and 1 computer)
